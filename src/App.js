@@ -28,14 +28,12 @@ const whatILike = [
   }
 ];
 
+function renderWhatILike(eachItem) {
+  return <Fav name={eachItem.name} picture={eachItem.image} />;
+}
+
 function App() {
-  return (
-    <div>
-      {whatILike.map(eachItem => (
-        <Fav name={eachItem.name} picture={eachItem.image} />
-      ))}
-    </div>
-  );
+  return <div>{whatILike.map(renderWhatILike)}</div>;
 }
 
 export default App;
